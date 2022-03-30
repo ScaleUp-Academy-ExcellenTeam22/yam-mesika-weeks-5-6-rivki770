@@ -10,7 +10,7 @@ def check_date_if_its_monday(date_to_check: date) -> bool:
     :return: True if is monday. False if isn't.
     """
     day_in_week = calendar.day_name[date_to_check.weekday()]
-    return True if day_in_week == "Monday" else False
+    return day_in_week == "Monday"
 
 
 def random_date_between_two_dates(date_low: date, date_high: date):

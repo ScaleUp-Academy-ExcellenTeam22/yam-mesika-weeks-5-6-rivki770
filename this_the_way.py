@@ -7,9 +7,7 @@ def files_starts_at_deep(path_to_files_folder: str):
     :param path_to_files_folder: The path to folder
     :return: list of a files that they start in deep.
     """
-    list_of_file = os.listdir(path_to_files_folder)
-    list_file_deep = [file for file in list_of_file if file.startswith('deep')]
-    return list_file_deep
+    return [file for file in os.listdir(path_to_files_folder) if file.startswith('deep')]
 
 
 def main():
