@@ -9,8 +9,7 @@ def join_lists_to_one_list(*lists_param: list, sep="-") -> list:
     if len(lists_param) == 0:
         return []
 
-    for inner_list in lists_param:
-        inner_list.append(sep)
+    [inner_list.append(sep) for inner_list in lists_param]
 
     consolidated_list = [char for inner_list in lists_param for char in inner_list]
     consolidated_list.pop()
